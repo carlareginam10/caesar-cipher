@@ -6,8 +6,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
+    <div id="root">
+
+      <form>
+        Digite o texto que deseja criptografar: <br>
+        <input type="text" class="fiel" id="textUser"> <br> <br>
+        Digite uma chave para criptografar seu texto: <br>
+        (Números inteiros de 1 a 1000) <br>
+        <input type="text" class="fiel" id="keyUser"> <br><br><br>
+        <input type="submit" class="btn" value="Cifrar" onclick="encode();">
+        <input type="submit" class='btn' value="Decifrar" onclick= "decode();">
+      </form>
+
+      <p> Resultado dos dados Criptografados e Descriptografados </p>
+      <p> (O formulário ainda não está chamando as funções encode e decode e quando tem  + de uma palavra e espaço o espaço duplica a ultima letra) </p>
+     
+      
+      <!--<p> Texto cifrado</p>
+      <p id="textoCifrado"></p>       
+      <p> _________________________</p>
+      <p> Texto decifrado</p>
+      <p id="textoDecifrado"></p>-->
+    </div>
+    
+  <script src="cipher.js"></script>
+  <script src="tests.js"></script>
   </body>
 </html>
