@@ -14,20 +14,22 @@
         Digite uma chave para criptografar seu texto: <br>
         (Números inteiros de 1 a 1000) <br>
         <input type="text" class="fiel" id="keyUser"> <br><br><br>
-        <input type="submit" class="btn" value="Cifrar" onclick="encode();">
-        <input type="submit" class='btn' value="Decifrar" onclick= "decode();">
+        <input type="button" class="btn" value="Cifrar" onclick="encode();">
+        <input type="button" class='btn' value="Decifrar" onclick= "decode();">
       </form>
 
-      <p> Resultado dos dados Criptografados e Descriptografados </p>
-      <p> (O formulário ainda não está chamando as funções encode e decode e quando tem  + de uma palavra e espaço o espaço duplica a ultima letra) </p>
-     
-      
-      <!--<p> Texto cifrado</p>
+    </div> 
+
+    <div id="result"></div>  
+
+      <p> Texto cifrado</p>
       <p id="textoCifrado"></p>       
       <p> _________________________</p>
       <p> Texto decifrado</p>
-      <p id="textoDecifrado"></p>-->
-    </div>
+      <p id="textoDecifrado"></p>
+      
+    </div> 
+    
     
   <script src="cipher.js"></script>
   <script src="tests.js"></script>
