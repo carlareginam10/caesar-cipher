@@ -2,9 +2,21 @@
 let text = '';
 let key = '';
 
-function encode() {
+function btnEncode() {
   text = document.getElementById('textUser').value;
   key = parseInt(document.getElementById('keyUser').value);
+  document.getElementById("textoCifrado").innerHTML = encode(text, key);
+}
+
+function btnDecode(text, key) {
+  text = document.getElementById('textUser').value;
+  key = parseInt(document.getElementById('keyUser').value);
+  document.getElementById("textoDecifrado").innerHTML = decode(text, key);
+  
+}
+
+
+function encode(text, key) {
   let codUpper = 'A';
   let codLow = 'a';
   let codFirtPositionUpper = codUpper.charCodeAt(0)
@@ -23,13 +35,12 @@ function encode() {
       codFullPosition = codAsc;
     }        
     auxArray.push(String.fromCharCode(codFullPosition));
-    document.getElementById("textoCifrado").innerHTML = auxArray.join('');       
+           
   }
+  return auxArray.join('');
 }; 
 
-function decode() {
-  text = document.getElementById('textUser').value;
-  key = parseInt(document.getElementById('keyUser').value);
+function decode(text, key) {
   let codUpper = 'Z';
   let codLow = 'z';
   let codFirtPositionUpper = codUpper.charCodeAt(0)
@@ -48,6 +59,7 @@ function decode() {
       codFullPosition = codAsc;
     }
     auxArray.push(String.fromCharCode(codFullPosition));
-    document.getElementById("textoDecifrado").innerHTML = auxArray.join('');
+   
   }   
+  return auxArray.join('');
 }; 
