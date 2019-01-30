@@ -4,17 +4,26 @@ let key = '';
 
 function btnEncode() {
   text = document.getElementById('textUser').value;
-  key = parseInt(document.getElementById('keyUser').value);
-  document.getElementById("textoCifrado").innerHTML = encode(text, key);
+  key = parseInt(document.getElementById('keyUser').value);   
+  document.getElementById("textEncode").innerHTML = encode(text, key); 
 }
 
 function btnDecode(text, key) {
   text = document.getElementById('textUser').value;
   key = parseInt(document.getElementById('keyUser').value);
-  document.getElementById("textoDecifrado").innerHTML = decode(text, key);
+  document.getElementById("textDecode").innerHTML = decode(text, key);
   
 }
 
+function showEncode () {
+  document.getElementById("resultDecode").className="hide"
+  document.getElementById("resultEncode").className="show";  
+}
+
+function showDecode () {
+  document.getElementById("resultEncode").className="hide";
+  document.getElementById("resultDecode").className="show";
+}
 
 function encode(text, key) {
   let codUpper = 'A';

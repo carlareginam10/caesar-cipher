@@ -7,31 +7,41 @@
   </head>
   <body>
     <div id="root">
+      
+      <h1> Cifra de César</h1>
+      
+      <p>Com o programa Cipher você pode codificar e descodificar um texto
+          a partir de uma chave numérica. Para descodificar seu texto é necessário usar
+          a mesma chave que você utilizou para codificar. 
+          <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar">Clique aqui</a>  e conheça mais sobre
+          a história da Cifra de César.
+      </p><br>
 
-      <form>
-        Digite o texto que deseja criptografar: <br>
-        <input type="text" class="fiel" id="textUser"> <br> <br>
-        Digite uma chave para criptografar seu texto: <br>
-        (Números inteiros de 1 a 1000) <br>
-        <input type="text" class="fiel" id="keyUser"> <br><br><br>
-        <input type="button" class="btn" value="Cifrar" onclick="btnEncode();">
-        <input type="button" class='btn' value="Decifrar" onclick= "btnDecode();">
+      <form>     
+                
+        <textarea  class="fiel1" id="textUser"   rows="4" cols="42" maxlength="400">Digite o texto que deseja codificar ou descodificar:</textarea><br>
+        
+         Digite um numero:  <br>
+        <input type="number" min="1" max="50000" class="fiel" id="keyUser"> <br><br>
+
+        <input type="button" class="btn" value="Codificar" onclick="btnEncode(); showEncode();">
+        <input type="button" class='btn' value="Descodificar" onclick= "btnDecode();showDecode();">
       </form>
 
     </div> 
 
-    <div id="result"></div>  
+    <div id="resultEncode" class="hide">
+      <h2>Texto codificado:</h2> 
+      <p id="textEncode"></p>
+    </div>
+    
+    <div id="resultDecode" class="hide">
+        <h2>Texto descodificado:</h2> 
+        <p id="textDecode"></p>
+    </div>     
+        
+    <script src="cipher.js"></script>
+    <script src="tests.js"></script>
 
-      <p> Texto cifrado</p>
-      <p id="textoCifrado"></p>       
-      <p> _________________________</p>
-      <p> Texto decifrado</p>
-      <p id="textoDecifrado"></p>
-      
-    </div> 
-    
-    
-  <script src="cipher.js"></script>
-  <script src="tests.js"></script>
   </body>
 </html>

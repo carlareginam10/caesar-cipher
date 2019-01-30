@@ -1,8 +1,8 @@
 html {
     background-image: url("imgBack.jpg")
- }
+}
  
- body {
+body {
    width: 500px;
    margin: 0 auto;
    background-color:rgb(4, 59, 63);
@@ -11,26 +11,43 @@ html {
    color:#DCDCDC;
    text-align: center;
    font-family: cursive, arial;
- }
+}
  
- form{
+form{
    border-radius: 5px;
    background-color: rgb(4, 88, 94);
-   padding: 50px;
+   padding: 40px;
    width:400px;
-   margin: 0 auto;
- }
+   margin: 0 auto;  
+   text-align: left;
+}
+
+p {
+  text-align: justify;
+}
+
+textarea{
+  color: #008B8B; 
+  font-size: 16px;
+}
  
- .fiel{
+#aln{
+  text-align: left;
+
+} 
+
+
+.fiel{
   padding: 8px;
-  width: 320px;
- }
- 
- .fild:focus{
-   border-color:#DCDCDC;
- }
+  width: 120px;
   
- .btn{
+}
+ 
+.fild:focus{
+   border-color:#DCDCDC;
+}
+  
+.btn{
    font-family: cursive, arial;
    font-size: 14px;
    margin: 0.5em;
@@ -40,8 +57,17 @@ html {
    padding: 10px ;
    cursor: pointer;
    color: #008B8B; 
-   width: 156px;
+   width: 182px;
    text-shadow: 2px 2px  2px #A9A9A9;
    border-radius: 0.5em;
    box-shadow: 2px 2px 0px 3px #DCDCDC;
- }
+}
+
+.hide{
+  display: none;
+
+}
+
+.show{
+  display: block;
+}
