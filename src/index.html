@@ -13,17 +13,13 @@
       <p>Com o programa Cipher você pode codificar e descodificar um texto
           a partir de uma chave numérica. Para descodificar seu texto é necessário usar
           a mesma chave que você utilizou para codificar. 
-          <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar">Clique aqui</a>  e conheça mais sobre
+          <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank">Clique aqui</a>  e conheça mais sobre
           a história da Cifra de César.
       </p><br>
 
-      <form>     
-                
-        <textarea  class="fiel1" id="textUser"   rows="4" cols="42" maxlength="400">Digite o texto que deseja codificar ou descodificar:</textarea><br>
-        
-         Digite um numero:  <br>
-        <input type="number" min="1" max="50000" class="fiel" id="keyUser"> <br><br>
-
+      <form>        
+        <textarea placeholder="Digite o texto que deseja Codificar ou Descodificar"  id="textUser"   rows="4" cols="48" maxlength="400"></textarea><br><br>
+        <input type="number" placeholder="Digite um número" min="1" max="50000" class="fiel" id="keyUser"> <br><br>
         <input type="button" class="btn" value="Codificar" onclick="btnEncode(); showEncode();">
         <input type="button" class='btn' value="Descodificar" onclick= "btnDecode();showDecode();">
       </form>
@@ -42,6 +38,6 @@
         
     <script src="cipher.js"></script>
     <script src="tests.js"></script>
-
+    
   </body>
 </html>

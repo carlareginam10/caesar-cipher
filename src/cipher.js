@@ -3,20 +3,34 @@ let text = '';
 let key = '';
 
 function btnEncode() {
-  text = document.getElementById('textUser').value;
-  key = parseInt(document.getElementById('keyUser').value);   
-  document.getElementById("textEncode").innerHTML = encode(text, key); 
+  text = document.getElementById("textUser").value;
+  key = parseInt(document.getElementById("keyUser").value); 
+  if (key <=0 || key >50000 ) {
+    alert("Digite um número inteiro positivo entre 1 e 50.000")
+  } 
+  if (isNaN(key)) {
+      alert("Digite um número inteiro positivo entre 1 e 50.000")
+  }
+  else {
+    document.getElementById("textEncode").innerHTML = encode(text, key);
+  } 
 }
 
 function btnDecode(text, key) {
-  text = document.getElementById('textUser').value;
-  key = parseInt(document.getElementById('keyUser').value);
-  document.getElementById("textDecode").innerHTML = decode(text, key);
-  
+  text = document.getElementById("textUser").value;
+  key = parseInt(document.getElementById("keyUser").value);
+  if (key <=0 || key >50000) {
+    alert("Digite um número positivo") 
+  }
+  if (isNaN(key)) {
+      alert("Digite um número inteiro positivo entre 1 e 50.000")  
+  } else {
+    document.getElementById("textDecode").innerHTML = decode(text, key);
+  }
 }
 
 function showEncode () {
-  document.getElementById("resultDecode").className="hide"
+  document.getElementById("resultDecode").className="hide";
   document.getElementById("resultEncode").className="show";  
 }
 
@@ -26,9 +40,9 @@ function showDecode () {
 }
 
 function encode(text, key) {
-  let codUpper = 'A';
-  let codLow = 'a';
-  let codFirtPositionUpper = codUpper.charCodeAt(0)
+  let codUpper = "A";
+  let codLow = "a";
+  let codFirtPositionUpper = codUpper.charCodeAt(0);
   let codFirtPositionLow = codLow.charCodeAt(0);
   let codFullPosition;
   let codAsc;
@@ -44,15 +58,14 @@ function encode(text, key) {
       codFullPosition = codAsc;
     }        
     auxArray.push(String.fromCharCode(codFullPosition));
-           
   }
   return auxArray.join('');
 }; 
 
 function decode(text, key) {
-  let codUpper = 'Z';
-  let codLow = 'z';
-  let codFirtPositionUpper = codUpper.charCodeAt(0)
+  let codUpper = "Z";
+  let codLow = "z";
+  let codFirtPositionUpper = codUpper.charCodeAt(0);
   let codFirtPositionLow = codLow.charCodeAt(0);
   let codFullPosition;
   let codAsc;
@@ -68,7 +81,6 @@ function decode(text, key) {
       codFullPosition = codAsc;
     }
     auxArray.push(String.fromCharCode(codFullPosition));
-   
-  }   
+  } 
   return auxArray.join('');
 }; 

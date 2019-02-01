@@ -28,18 +28,24 @@ p {
 
 textarea{
   color: #008B8B; 
-  font-size: 16px;
+  font-size: 15px;
+  font-family: arial;
+  width:400px;
+  height:120px
 }
  
 #aln{
   text-align: left;
-
 } 
 
 
 .fiel{
-  padding: 8px;
-  width: 120px;
+  padding: 12px;
+  width: 150px;
+  color: #008B8B; 
+  font-size: 15px; 
+  font-family: arial;
+  
   
 }
  
