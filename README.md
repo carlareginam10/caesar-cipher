@@ -51,7 +51,9 @@ Nesse projeto não foram utilizadas bibliotecas ou frameworks, só
 ├── README.md
 ├── src
 │   ├── cipher.js
-|___|__ imgBack,jpg
+|___|__ CadeadoA.png
+|___|__ CadeadoF.png
+|___|__ imgBack.jpg
 │   ├── index.html
 │   ├── tests.js
 │   └── style.css

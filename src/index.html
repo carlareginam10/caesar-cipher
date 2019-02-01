@@ -18,7 +18,7 @@
       </p><br>
 
       <form>        
-        <textarea placeholder="Digite o texto que deseja Codificar ou Descodificar"  id="textUser"   rows="4" cols="48" maxlength="400"></textarea><br><br>
+        <textarea placeholder="Digite o texto que deseja Codificar ou Descodificar"  id="textUser"   rows="6" cols="48" maxlength="400"></textarea><br><br>
         <input type="number" placeholder="Digite um número" min="1" max="50000" class="fiel" id="keyUser"> <br><br>
         <input type="button" class="btn" value="Codificar" onclick="btnEncode(); showEncode();">
         <input type="button" class='btn' value="Descodificar" onclick= "btnDecode();showDecode();">
@@ -27,17 +27,28 @@
     </div> 
 
     <div id="resultEncode" class="hide">
-      <h2>Texto codificado:</h2> 
-      <p id="textEncode"></p>
-    </div>
+     
+      <h2> Texto codificado</h2> 
+      <h2><img src="CadeadoF.png"/></h2>
+     
+      <form > 
+         <textarea   id="textEncode"   rows="6" cols="48" maxlength="600"></textarea>     
+      </form>
+    </div><br>
     
     <div id="resultDecode" class="hide">
-        <h2>Texto descodificado:</h2> 
-        <p id="textDecode"></p>
-    </div>     
         
+        <h2>Texto descodificado</h2> 
+        <h2><img src="CadeadoA.png"/></h2>
+        <form >
+          <textarea   id="textDecode"   rows="6" cols="48" maxlength="600"></textarea>
+       </form>        
+    </div><br>     
+           
     <script src="cipher.js"></script>
     <script src="tests.js"></script>
+
+    <footer> Projeto Cipher - Laboratória - Carla Regina Mendes </footer>
     
   </body>
 </html>

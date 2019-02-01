@@ -14,13 +14,21 @@ body {
 }
  
 form{
-   border-radius: 5px;
+   border-radius: 20px;
    background-color: rgb(4, 88, 94);
    padding: 40px;
    width:400px;
    margin: 0 auto;  
    text-align: left;
+   border-style: double;
 }
+
+img{
+    width:45px;
+    margin-right:5px;
+    
+}
+
 
 p {
   text-align: justify;
@@ -31,7 +39,7 @@ textarea{
   font-size: 15px;
   font-family: arial;
   width:400px;
-  height:120px
+  height:80px
 }
  
 #aln{
@@ -76,4 +84,10 @@ textarea{
 
 .show{
   display: block;
+}
+
+footer{
+  font-family: cursive, arial;
+  font-size: 12px;
+  color: #008B8B; 
 }

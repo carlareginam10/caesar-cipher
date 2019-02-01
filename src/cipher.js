@@ -11,19 +11,25 @@ function btnEncode() {
   if (isNaN(key)) {
       alert("Digite um número inteiro positivo entre 1 e 50.000")
   }
+  if( text ===""|| text===null  ){
+    alert("Digite o texto que deseja codificar ou descodificar")
+  }
   else {
     document.getElementById("textEncode").innerHTML = encode(text, key);
   } 
 }
 
-function btnDecode(text, key) {
+function btnDecode() {
   text = document.getElementById("textUser").value;
   key = parseInt(document.getElementById("keyUser").value);
   if (key <=0 || key >50000) {
-    alert("Digite um número positivo") 
+    alert("Digite um número inteiro positivo entre 1 e 50.000") 
   }
   if (isNaN(key)) {
-      alert("Digite um número inteiro positivo entre 1 e 50.000")  
+      alert("Digite um número inteiro positivo entre 1 e 50.000")
+  }
+  if( text ===""|| text===null  ){
+        alert("Digite o texto que deseja codificar ou descodificar")     
   } else {
     document.getElementById("textDecode").innerHTML = decode(text, key);
   }
