@@ -5,14 +5,13 @@ let key = '';
 function btnEncode() {
   text = document.getElementById("textUser").value;
   key = parseInt(document.getElementById("keyUser").value); 
-  if (key <=0 || key >50000 ) {
+  if (key <=0 || key >50000  || isNaN(key)) {
     alert("Digite um número inteiro positivo entre 1 e 50.000")
+    return;
   } 
-  if (isNaN(key)) {
-      alert("Digite um número inteiro positivo entre 1 e 50.000")
-  }
-  if( text ===""|| text===null  ){
+  if( text ==="" || text===null  ){
     alert("Digite o texto que deseja codificar ou descodificar")
+    return;
   }
   else {
     document.getElementById("textEncode").innerHTML = encode(text, key);
@@ -22,14 +21,13 @@ function btnEncode() {
 function btnDecode() {
   text = document.getElementById("textUser").value;
   key = parseInt(document.getElementById("keyUser").value);
-  if (key <=0 || key >50000) {
+  if (key <=0 || key >50000 || isNaN(key)) {
     alert("Digite um número inteiro positivo entre 1 e 50.000") 
-  }
-  if (isNaN(key)) {
-      alert("Digite um número inteiro positivo entre 1 e 50.000")
+    return;
   }
   if( text ===""|| text===null  ){
-        alert("Digite o texto que deseja codificar ou descodificar")     
+    alert("Digite o texto que deseja codificar ou descodificar")  
+    return;   
   } else {
     document.getElementById("textDecode").innerHTML = decode(text, key);
   }
